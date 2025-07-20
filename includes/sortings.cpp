@@ -2,6 +2,7 @@
 #include <cmath>
 #include <algorithm>
 #include <climits>
+#include <vector>
 #include "sortings.hpp"
 
 using namespace std;
@@ -129,4 +130,32 @@ void Sortings::countingSort(int* nums, int tam) {
 
     free(aux);
     free(temp);
+}
+
+void Sortings::bucketSort(int *nums, int tam) {
+    int **buckets = (int**) malloc(sizeof(int*) * 10);
+    if(!buckets) exit(1);
+    
+    for(int i = 0; i < 10; i++) {
+        buckets[i] = (int*) malloc(sizeof(int) * tam);
+        if(!buckets[i]) {
+            for(int j = i - 1; j >= 0; j--) free(buckets[j]);
+            exit(1);
+        }
+    }
+    int bucketIndex[10] = {0};
+    for(int i = 0; i < tam; i++) {
+        int index = nums[i] / 10;
+        buckets[index][bucketIndex[index]++] = nums[i];
+    }
+    for(int j = 0; j < 10; j++)
+        Sortings::insertionSort(buckets[j], bucketIndex[j]);
+
+    int idx = 0;
+    for(int k = 0; k < 10; k++)
+        for(int l = 0; l < bucketIndex[k]; l++)
+            nums[idx++] = buckets[k][l];
+    
+    for(int t = 0; t < tam; t++) free(buckets[t]);
+    free(buckets);
 }

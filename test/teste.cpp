@@ -53,7 +53,11 @@ int main(int argc, char *argv[]) {
         case 6: Sortings::countingSort(array, num);
                 cout << ">>> VIA COUNTING SORT: ";
                 break;
-        
+
+        case 7: Sortings::bucketSort(array, num);
+                cout << ">>> VIA BUCKET SORT: ";
+                break;
+
         default: break;
     }
     fin = time();

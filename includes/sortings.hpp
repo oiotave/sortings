@@ -17,5 +17,6 @@ class Sortings {
         static void countingSort(int*, int);
         static void mergeSort(int*, int, int);
         static void quickSort(int*, int, int);
+        static void bucketSort(int*, int);
 };
 #endif // SORTINGS_HPP
