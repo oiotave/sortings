@@ -156,6 +156,6 @@ void Sortings::bucketSort(int *nums, int tam) {
         for(int l = 0; l < bucketIndex[k]; l++)
             nums[idx++] = buckets[k][l];
     
-    for(int t = 0; t < tam; t++) free(buckets[t]);
+    for(int t = 0; t < 10; t++) free(buckets[t]);
     free(buckets);
 }
