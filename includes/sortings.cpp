@@ -75,7 +75,6 @@ void Sortings::merge(int *nums, int esq, int meio, int dir) {
 void Sortings::mergeSort(int* nums, int ini, int fin) {
     if(ini < fin) {
         int meio = floor((ini + fin) / 2);
-        
         mergeSort(nums, ini, meio);
         mergeSort(nums, meio + 1, fin);
         merge(nums, ini, meio, fin);
@@ -122,7 +121,7 @@ void Sortings::countingSort(int* nums, int tam) {
     for(int k = 1; k <= maior; k++) aux[k] += aux[k - 1];
 
     int *temp = (int*) calloc(tam, sizeof(int));
-    for(int l = 0; l < tam; l++) {
+    for(int l = tam - 1; l >= 0; l--) {
         temp[aux[nums[l]] - 1] = nums[l];
         aux[nums[l]]--;
     }
@@ -158,4 +157,27 @@ void Sortings::bucketSort(int *nums, int tam) {
     
     for(int t = 0; t < 10; t++) free(buckets[t]);
     free(buckets);
+}
+
+void Sortings::heapify(int *nums, int index, int tam) {
+    int max = index, left = 2 * index + 1, right = 2 * index + 2;
+
+    if(left < tam and nums[left] > nums[max]) max = left;
+    if(right < tam and nums[right] > nums[max]) max = right;
+    if(max != index) {
+        swap(nums, max, index);
+        heapify(nums, max, tam);
+    }
+}
+
+void Sortings::heapSort(int *nums, int tam) {
+    // Constroi um heap maximo em cima do vetor
+    for(int i = tam / 2 - 1; i >= 0; i--)
+        heapify(nums, i, tam);
+
+    for(int i = tam - 1; i >= 0; i--) {
+        swap(nums, 0, i);
+        tam--;
+        heapify(nums, 0, tam);
+    }
 }

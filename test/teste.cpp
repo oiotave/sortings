@@ -58,6 +58,10 @@ int main(int argc, char *argv[]) {
                 cout << ">>> VIA BUCKET SORT: ";
                 break;
 
+        case 8: Sortings::heapSort(array, num);
+                cout << ">>> VIA HEAP SORT: ";
+                break;
+
         default: break;
     }
     fin = time();

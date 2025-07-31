@@ -8,6 +8,7 @@ class Sortings {
         static void swap(int*, int, int);
         static void merge(int*, int, int, int);
         static int partition(int*, int, int);
+        static void heapify(int*, int, int);
 
     public:
         Sortings();
@@ -18,5 +19,6 @@ class Sortings {
         static void mergeSort(int*, int, int);
         static void quickSort(int*, int, int);
         static void bucketSort(int*, int);
+        static void heapSort(int*, int);
 };
 #endif // SORTINGS_HPP
