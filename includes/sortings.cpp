@@ -2,7 +2,6 @@
 #include <cmath>
 #include <algorithm>
 #include <climits>
-#include <vector>
 #include "sortings.hpp"
 
 using namespace std;
