@@ -11,7 +11,7 @@ Para uso adequado das implementações feitas, clone o repositório em sua máqu
 ```bash
 git clone "https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git"
 ```
-Após isso, inclua qualquer um dos cabeçalhos para a estrutura adequada em seu código C++. Lembre-se sempre de colocar a pasta em questão no mesmo diretório de seu projeto. Por exemplo:
+Após isso, inclua o cabeçalho para o código-fonte adequado em seu código C++. Lembre-se sempre de colocar a pasta em questão no mesmo diretório de seu projeto. Por exemplo:
 ```c
 #include "sortings.cpp"
 ```
