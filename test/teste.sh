@@ -3,7 +3,7 @@
 mkdir -p bin
 g++ teste.cpp ../includes/sortings.cpp -o ./bin/exec
 
-echo -e "\n=== TESTE DE EXECUCAO E PERFORMANCE DE ALGORTIMOS DE ORDENACAO ==="
+echo -e "\n=== TESTE DE EXECUCAO E PERFORMANCE DE ALGORITMOS DE ORDENACAO ==="
 echo -n -e "\nInforme o tamanho de vetor: "
 read number
 echo -n -e "\n"
