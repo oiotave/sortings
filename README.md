@@ -1,6 +1,4 @@
 # Algoritmos de ordenação
-
-## Introdução
 As implementações a seguir foram feitas para fins didáticos durante a disciplina de Estrutura de Dados e Algoritmos II, na Universidade Federal da Paraíba. Todas as implementações foram feitas usando a linguagem C++.
 
 ## Estrutura
