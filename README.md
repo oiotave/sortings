@@ -9,7 +9,7 @@ O repositório em questão possui os seguintes diretórios:
 ## Instruções de uso e compilação
 Para uso adequado das implementações feitas, clone o repositório em sua máquina com o seguinte comando:
 ```bash
-git clone "https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git"
+git clone "URL_DO_REPOSITÓRIO"
 ```
 Após isso, inclua o cabeçalho para o código-fonte adequado em seu código C++. Lembre-se sempre de colocar a pasta em questão no mesmo diretório de seu projeto. Por exemplo:
 ```c
