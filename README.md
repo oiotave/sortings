@@ -3,7 +3,7 @@ As implementações a seguir foram feitas para fins didáticos durante a discipl
 
 ## Estrutura
 O repositório em questão possui os seguintes diretórios:
-1. ```includes```: armazena as implementações de todos os oito algoritmos de ordenação.
+1. ```includes```: armazena as implementações de todos os oito algoritmos de ordenação usados.
 2. ```test```: possui um arquivo de teste em C++ para comparação de tempo de execução e um script shell para automatizar a execução de teste.
 
 ## Instruções de uso e compilação
@@ -13,7 +13,7 @@ git clone "URL_DO_REPOSITÓRIO"
 ```
 Após isso, inclua o cabeçalho para o código-fonte adequado em seu código C++. Lembre-se sempre de colocar a pasta em questão no mesmo diretório de seu projeto. Por exemplo:
 ```c
-#include "sortings.cpp"
+#include "sortings.hpp"
 ```
 Por fim, na hora de compilar, lembre-se de incluir o arquivo-fonte da implementação no comando. Por exemplo:
 ```bash
